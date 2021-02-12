@@ -17,8 +17,8 @@ jobs:
         node-version: '10.14.2'
 
     - run: yarn install
-    - run: name: Install JUnit coverage reporter
-      run yarn add --dev jest-junit
+    - name: Install JUnit coverage reporter
+      run: yarn add --dev jest-junit
     - name: Run tests with JUnit as reporter
       run: npx jest --ci --runInBand --reporters=default --reporters=jest-junit
       env:
